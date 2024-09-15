@@ -1,18 +1,13 @@
 {
   "name": "marcadao-notificacao",
   "version": "1.0.0",
-  "description": "",
-  "main": "mercadao.js",
   "scripts": {
-    "start": "node mercadao.js",
-    "postinstall": "npx puppeteer install"
+    "start": "node mercadao.js"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "nodemailer": "^6.9.14",
-    "puppeteer": "^23.1.1",
-    "twilio": "^5.3.0"
+    "puppeteer": "^20.7.4",
+    "nodemailer": "^6.9.3",
+    "twilio": "^4.14.0"
   },
   "author": "",
   "license": "ISC"
