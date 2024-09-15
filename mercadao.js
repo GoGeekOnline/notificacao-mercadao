@@ -68,8 +68,15 @@ async function sendSmsNotification(message) {
 
 // Função para verificar novos pedidos
 async function checkOrders() {
-    const browser = await puppeteer.launch({ headless: true });
-    let page = await browser.newPage();
+    const browser = await puppeteer.launch({
+        headless: true, // Certifique-se de que está rodando no modo headless
+        executablePath: puppeteer.executablePath(), // Garante que usa o Chrome instalado
+        args: ['--no-sandbox', '--disable-setuid-sandbox'], // Essas opções ajudam a rodar o Puppeteer no Render
+    });
+    
+
+
+    const page = await browser.newPage();
     
     // Função para reiniciar a página caso ocorra algum problema
     async function restartPage() {
